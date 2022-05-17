@@ -1,14 +1,19 @@
 import 'colors'
+import parseUrl from './src/modules/parseUrl.js'
+import { pedirUrl } from './src/modules/pedirUrl.js'
 
-const url = new URL('http://www.ort.edu.ar:8080/alumnos/index.htm?curso=2022&mes=mayo')
 
-const objParametros = Object.fromEntries(url.searchParams.entries())
+const main = async() => {
+    try {
+        const url = await pedirUrl()
+        const urlObject = parseUrl(url)
+        console.log(`${JSON.stringify(urlObject, undefined, 4)}`.green)
+        
+    } catch (error) {
+        console.log(`URL invalida`.green)
+    }
+}    
 
-const urlObject = {
-    host: url.host,
-    pathname: url.pathname,
-    parametros: objParametros
-}
+main()
 
-console.log(`${JSON.stringify(urlObject, undefined, 4)}`.green)
 

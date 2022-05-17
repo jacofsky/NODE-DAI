@@ -1,13 +1,5 @@
-import fs from 'fs'
+import copiarPegar from './src/modules/copiarPegar.js'
 
-const path = './hola.txt'
-const newContent = 'Hola mundo 2'
 
-if(fs.existsSync(path)){
-    fs.writeFileSync(path, newContent)
-    const resp = fs.readFileSync(path, {encoding: 'utf-8'})
-    console.log(resp)
-} else {
-    console.log('El archivo no se encontro')
-}    
 
+copiarPegar('./hola.txt', './hola2.txt')

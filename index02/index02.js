@@ -1,6 +1,6 @@
-import { pedirOpcion, pedirNumeros } from './matematica/src/modules/inquirer.js'
+import { pedirOpcion, pedirNumeros } from './src/modules/inquirer.js'
 import 'colors'
-import { dividir, multiplicar, restar, sumar } from './matematica/src/modules/funcionesMatematicas.js'
+import { dividir, multiplicar, restar, sumar } from './src/modules/funcionesMatematicas.js'
 
 const main = async() => {
 

@@ -1,6 +1,6 @@
 import 'colors'
 
-import Alumno from "./Alumno.js"
+import Alumno from "./src/models/Alumno.js"
 import { pedirAlumno } from "./pedirAlumno.js"
 
 
